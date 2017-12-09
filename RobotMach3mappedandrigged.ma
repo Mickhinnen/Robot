@@ -10,7 +10,7 @@ fileInfo "application" "maya";
 fileInfo "product" "Maya 2017";
 fileInfo "version" "2017";
 fileInfo "cutIdentifier" "201706020738-1017329";
-fileInfo "osv" "Microsoft Windows 8 Enterprise Edition, 64-bit  (Build 9200)\n";
+fileInfo "osv" "Microsoft Windows 7 Ultimate Edition, 64-bit Windows 7 Service Pack 1 (Build 7601)\n";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "6BFEF452-45D2-1ECA-D1A8-C3B32DF9FA34";
@@ -102,7 +102,7 @@ createNode imagePlane -n "imagePlaneShape3" -p "imagePlane3";
 	rename -uid "3A900E90-40F8-AF7E-A0F5-EFBF805AA7B1";
 	setAttr -k off ".v";
 	setAttr ".fc" 25;
-	setAttr ".imn" -type "string" "C:/Users/10830720/Documents/Github/DGM1660/DGM1660_-fall-2017/Robot Model//Mach2Front.PNG";
+	setAttr ".imn" -type "string" "D:/Backups/Users/Administrator/Documents/Github/DGM/DGM1660_-fall-2017/Robot Model//Mach2Front.PNG";
 	setAttr ".cov" -type "short2" 590 883 ;
 	setAttr ".ag" 0.66233766202318978;
 	setAttr ".dlc" no;
@@ -118,7 +118,7 @@ createNode imagePlane -n "imagePlaneShape4" -p "imagePlane4";
 	rename -uid "E856587B-47A9-9F29-7E2B-66A125437B60";
 	setAttr -k off ".v";
 	setAttr ".fc" 25;
-	setAttr ".imn" -type "string" "C:/Users/10830720/Documents/Github/DGM1660/DGM1660_-fall-2017/Robot Model//Mach2Side.PNG";
+	setAttr ".imn" -type "string" "D:/Backups/Users/Administrator/Documents/Github/DGM/DGM1660_-fall-2017/Robot Model//Mach2Side.PNG";
 	setAttr ".cov" -type "short2" 600 888 ;
 	setAttr ".ag" 0.51298701299910809;
 	setAttr ".dlc" no;
@@ -11253,11 +11253,11 @@ createNode mesh -n "L_UpperLeg" -p "Left_leg1";
 		1468 1 
 		1469 1 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "polySurface99" -p "Left_leg1";
+createNode transform -n "LeftLeg" -p "Left_leg1";
 	rename -uid "4A0E9B2A-41F8-4428-E158-67ABA4B55D05";
 	setAttr ".rp" -type "double3" -0.92084937151627033 0 0 ;
 	setAttr ".sp" -type "double3" -0.92084937151627033 0 0 ;
-createNode mesh -n "R_LowerLeg" -p "polySurface99";
+createNode mesh -n "R_LowerLeg" -p "LeftLeg";
 	rename -uid "AE9C45B0-4AFA-BF69-9691-C789FC472A39";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -12714,7 +12714,7 @@ createNode mesh -n "R_LowerLeg" -p "polySurface99";
 		485 1 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
-createNode mesh -n "polySurfaceShape103" -p "polySurface99";
+createNode mesh -n "LeftLegShape" -p "LeftLeg";
 	rename -uid "E4BABA86-4151-B278-37FC-24A35C1E3B8A";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -13635,7 +13635,7 @@ createNode mesh -n "polySurfaceShape103" -p "polySurface99";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
-createNode transform -n "polySurface70" -p "|Robot_hips";
+createNode transform -n "UpperRightLeg" -p "|Robot_hips";
 	rename -uid "646B27D9-40D2-0A54-0D9F-CA9297B1A2C1";
 	setAttr ".rp" -type "double3" 0.45194508009153306 1.6393948899408117 0.020572855439780713 ;
 	setAttr ".sp" -type "double3" 0.45194508009153306 1.6393948899408117 0.020572855439780713 ;
@@ -18093,7 +18093,7 @@ createNode mesh -n "R_UpperLeg" -p "polySurface70";
 		1468 1 
 		1469 1 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "polySurface97" -p "polySurface70";
+createNode transform -n "RightLeg" -p "UpperRightLeg";
 	rename -uid "BBE69A32-433D-E829-85F4-1C900CFFCE9E";
 	setAttr ".rp" -type "double3" 0.45999940050444665 0.6665276395112204 0.0095614600571382047 ;
 	setAttr ".sp" -type "double3" 0.45999940050444665 0.6665276395112204 0.0095614600571382047 ;
@@ -20845,11 +20845,11 @@ createNode mesh -n "Robot_CapsolSuport" -p "Robot_CapsolSupport";
 		84 1 
 		85 1 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "polySurface98" -p "Robot_CapsolSupport";
+createNode transform -n "UpperTorso" -p "Robot_CapsolSupport";
 	rename -uid "16E93E79-422F-D157-6690-96BE2D7FDD7C";
 	setAttr ".rp" -type "double3" -0.0058869199223479107 3.2751376543497752 -0.003543339129588108 ;
 	setAttr ".sp" -type "double3" -0.0058869199223283708 3.2751376543497748 -0.0035433391295878473 ;
-createNode mesh -n "Robot_Capsol_top" -p "polySurface98";
+createNode mesh -n "Robot_Capsol_top" -p "UpperTorso";
 	rename -uid "8E67F1EA-4C28-6775-4732-1BB9044DB7BE";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -21845,7 +21845,7 @@ createNode mesh -n "Robot_Capsol_top" -p "polySurface98";
 		282 1 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
-createNode transform -n "Robot_Neck_group" -p "polySurface98";
+createNode transform -n "Robot_Neck_group" -p "UpperTorso";
 	rename -uid "1901DB2E-41DB-4C10-8A8B-50A3F273CF10";
 	setAttr ".rp" -type "double3" -0.012866538925861367 3.6051875263042934 0.0073012300442844551 ;
 	setAttr ".sp" -type "double3" -0.012866538925861367 3.6051875263042934 0.0073012300442844551 ;
@@ -23692,7 +23692,7 @@ createNode transform -n "Robot_Head" -p "Robot_Neck_group";
 	rename -uid "0A243915-4365-C50E-6641-54BC9893C1A6";
 	setAttr ".rp" -type "double3" -0.012808110083500353 3.9376432604323082 0.0032568760968878494 ;
 	setAttr ".sp" -type "double3" -0.012808110083500353 3.9376432604323082 0.0032568760968878494 ;
-createNode mesh -n "Robot_Head" -p "|Robot_hips|polySurface74|Robot_CapsolSupport|polySurface98|Robot_Neck_group|Robot_Head";
+createNode mesh -n "Robot_Head" -p "|Robot_hips|polySurface74|Robot_CapsolSupport|UpperTorso|Robot_Neck_group|Robot_Head";
 	rename -uid "6752E0A7-41FA-80D7-8832-059D19B87213";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -27853,7 +27853,7 @@ createNode mesh -n "Robot_Head" -p "|Robot_hips|polySurface74|Robot_CapsolSuppor
 		1225 1 
 		1226 1 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Robot_Shoulder_Bar" -p "polySurface98";
+createNode transform -n "Robot_Shoulder_Bar" -p "UpperTorso";
 	rename -uid "303A5EEB-44F2-10C1-7F12-DD8B3653419D";
 	setAttr ".rp" -type "double3" -0.0045515644276911118 3.2345326281792413 -0.0078015951586239401 ;
 	setAttr ".sp" -type "double3" -0.0045515644276911118 3.2345326281792421 -0.0078015951586239401 ;
@@ -28121,7 +28121,7 @@ createNode mesh -n "Robot_shoulder_Bar" -p "Robot_Shoulder_Bar";
 		82 1 
 		83 1 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "polySurface76" -p "Robot_Shoulder_Bar";
+createNode transform -n "RightShoulder" -p "Robot_Shoulder_Bar";
 	rename -uid "E5D46BED-45AD-868C-BA4D-22B0BFD81169";
 	setAttr ".rp" -type "double3" 0.81330019958495514 3.2305836015502698 -0.0081886719329547913 ;
 	setAttr ".sp" -type "double3" 0.81330019958495514 3.2305836015502698 -0.0081886719329547913 ;
@@ -30255,7 +30255,7 @@ createNode mesh -n "L_Shoulder" -p "polySurface76";
 		706 1 
 		707 1 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "polySurface77" -p "polySurface76";
+createNode transform -n "RightUpperArm" -p "RightShoulder";
 	rename -uid "E9303AEE-4C4B-93F9-02BA-FDB66B8FDCAC";
 	setAttr ".rp" -type "double3" 0.81366369622744961 3.2347770456007048 -0.0043449898844998697 ;
 	setAttr ".sp" -type "double3" 0.81366369622744961 3.2347770456007048 -0.0043449898844998697 ;
@@ -30976,7 +30976,7 @@ createNode mesh -n "L_upperarm" -p "polySurface77";
 		187 1 
 		188 1 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "polySurface78" -p "polySurface77";
+createNode transform -n "RightElbow" -p "RightUpperArm";
 	rename -uid "02884DAC-4E5F-1B20-D062-259C8C3E1103";
 	setAttr ".rp" -type "double3" 0.81730455160140714 2.5133481873946888 -0.002638524348304029 ;
 	setAttr ".sp" -type "double3" 0.81730455160140714 2.5133481873946888 -0.002638524348304029 ;
@@ -33140,7 +33140,7 @@ createNode mesh -n "L_elbow" -p "polySurface78";
 		731 1 
 		732 1 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "polySurface79" -p "polySurface78";
+createNode transform -n "RightArmHand" -p "RightElbow";
 	rename -uid "8A523A9C-4BBE-7DEF-8DCB-79B8B09BD69B";
 	setAttr ".rp" -type "double3" 0.81687866951300792 2.5327208945250854 -0.0017094147806966356 ;
 	setAttr ".sp" -type "double3" 0.81687866951300792 2.5327208945250854 -0.0017094147806966356 ;
@@ -35089,7 +35089,7 @@ createNode mesh -n "L_LowerArm" -p "polySurface79";
 		655 1 
 		656 1 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "polySurface81" -p "polySurface79";
+createNode transform -n "Finger11" -p "RightArmHand";
 	rename -uid "F2268FCD-430D-32FF-02CA-CFBCFBBFB976";
 	setAttr ".rp" -type "double3" 0.81382918357849121 1.8847575187683105 -0.13493707776069641 ;
 	setAttr ".sp" -type "double3" 0.81382918357849121 1.8847575187683105 -0.13493707776069641 ;
@@ -35591,7 +35591,7 @@ createNode mesh -n "L_UpperknuckleBack" -p "polySurface81";
 		145 1 
 		146 1 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "polySurface83" -p "polySurface81";
+createNode transform -n "Finger10" -p "Finger11";
 	rename -uid "FEEEDC72-4BDD-2A7D-7A15-899521DFE406";
 	setAttr ".rp" -type "double3" 0.81373685598373413 1.7807654630533118 -0.14784506110313145 ;
 	setAttr ".sp" -type "double3" 0.81373685598373413 1.7807654630533118 -0.14784506110313145 ;
@@ -35861,7 +35861,7 @@ createNode mesh -n "L_LowerKnuckleBack" -p "polySurface83";
 		82 1 
 		83 1 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "polySurface82" -p "polySurface79";
+createNode transform -n "Finger9" -p "RightArmHand";
 	rename -uid "DB37709D-420B-3E88-8F9B-E196CE4248C3";
 	setAttr ".rp" -type "double3" 0.68905603885650635 1.8814465999603271 0.10788524150848389 ;
 	setAttr ".sp" -type "double3" 0.68905603885650635 1.8814465999603271 0.10788524150848389 ;
@@ -36363,7 +36363,7 @@ createNode mesh -n "L_upperknuckle2" -p "polySurface82";
 		145 1 
 		146 1 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "polySurface84" -p "polySurface82";
+createNode transform -n "Finger8" -p "Finger9";
 	rename -uid "3580D001-4D29-B1C8-7D62-5E9D82A91B6B";
 	setAttr ".rp" -type "double3" 0.69500261545181274 1.7792600393295288 0.088675260543823242 ;
 	setAttr ".sp" -type "double3" 0.69500261545181274 1.7792600393295288 0.088675260543823242 ;
@@ -36633,7 +36633,7 @@ createNode mesh -n "L_LowerKnuckle2" -p "polySurface84";
 		82 1 
 		83 1 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "polySurface80" -p "polySurface79";
+createNode transform -n "Finger7" -p "RightArmHand";
 	rename -uid "AE065FAD-4E8F-38E5-2F18-B7A36FE9F813";
 	setAttr ".rp" -type "double3" 0.93564921617507935 1.8788309097290039 0.1083444356918335 ;
 	setAttr ".sp" -type "double3" 0.93564921617507935 1.8788309097290039 0.1083444356918335 ;
@@ -37135,7 +37135,7 @@ createNode mesh -n "L_upperknuckle1" -p "polySurface80";
 		145 1 
 		146 1 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "polySurface85" -p "polySurface80";
+createNode transform -n "Finger6" -p "Finger7";
 	rename -uid "6D0F7A89-4C61-396C-42B1-FA9B163E3BE5";
 	setAttr ".rp" -type "double3" 0.93529093265533447 1.7788681983947754 0.085112661123275757 ;
 	setAttr ".sp" -type "double3" 0.93529093265533447 1.7788681983947754 0.085112661123275757 ;
@@ -37405,11 +37405,11 @@ createNode mesh -n "L_LowerKnuckle1" -p "polySurface85";
 		82 1 
 		83 1 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "polySurface75" -p "polySurface79";
+createNode transform -n "RightLazer1" -p "RightArmHand";
 	rename -uid "A4160D38-45DE-4806-AC08-48A55BE7B34F";
 	setAttr ".rp" -type "double3" -0.15746566661392555 0.71673316362789996 -0.0017094147806966354 ;
 	setAttr ".sp" -type "double3" -0.15746566661392555 0.71673316362789996 -0.0017094147806966354 ;
-createNode mesh -n "L_Lazer" -p "polySurface75";
+createNode mesh -n "L_Lazer" -p "RightLazer1";
 	rename -uid "58B1437B-4B80-DEF8-AA31-1383225555CA";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -39473,7 +39473,7 @@ createNode mesh -n "L_Lazer" -p "polySurface75";
 		670 1 
 		671 1 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "polySurface86" -p "Robot_Shoulder_Bar";
+createNode transform -n "LeftShoulder" -p "Robot_Shoulder_Bar";
 	rename -uid "54C5B5F7-4FBD-B528-3684-F3A944E66DFB";
 	setAttr ".rp" -type "double3" -0.82022478715180502 3.2299712774911176 -0.0052612370240648076 ;
 	setAttr ".sp" -type "double3" -0.82022478715180502 3.2299712774911176 -0.0052612370240648076 ;
@@ -41608,7 +41608,7 @@ createNode mesh -n "R_Shoulder" -p "polySurface86";
 		706 1 
 		707 1 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "polySurface87" -p "polySurface86";
+createNode transform -n "LeftUpperArm" -p "LeftShoulder";
 	rename -uid "07CA4CED-4CEB-C5D1-3375-5BA4F112B42E";
 	setAttr ".rp" -type "double3" -0.82022478021887757 3.2322823991185494 0.0019852351345902297 ;
 	setAttr ".sp" -type "double3" -0.82022478021887757 3.2322823991185494 0.0019852351345902297 ;
@@ -42332,7 +42332,7 @@ createNode mesh -n "R_UpperArm" -p "polySurface87";
 		187 1 
 		188 1 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "polySurface88" -p "polySurface87";
+createNode transform -n "LeftElbow" -p "LeftUpperArm";
 	rename -uid "D14F3B5A-431A-762F-0D1B-1DA2CAED0B93";
 	setAttr ".rp" -type "double3" -0.8238655936738829 2.5104854106903076 -0.0026360083302043591 ;
 	setAttr ".sp" -type "double3" -0.8238655936738829 2.5104854106903076 -0.0026360083302043591 ;
@@ -44497,7 +44497,7 @@ createNode mesh -n "R_elbow" -p "polySurface88";
 		731 1 
 		732 1 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "polySurface89" -p "polySurface88";
+createNode transform -n "LeftArmHand" -p "LeftElbow";
 	rename -uid "76DAD00C-4C51-6BFA-4799-678A2763845C";
 	setAttr ".rp" -type "double3" -0.82303299782815431 2.5290217310242049 -0.0017094147806966356 ;
 	setAttr ".sp" -type "double3" -0.82303299782815431 2.5290217310242049 -0.0017094147806966356 ;
@@ -46445,7 +46445,7 @@ createNode mesh -n "R_LowerArm" -p "polySurface89";
 		655 1 
 		656 1 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "polySurface91" -p "polySurface89";
+createNode transform -n "Finger5" -p "LeftArmHand";
 	rename -uid "7E3B42F2-4634-A197-7E66-3598D4FA5EA2";
 	setAttr ".rp" -type "double3" -0.82039022445678711 1.8818590641021729 -0.1516404741825173 ;
 	setAttr ".sp" -type "double3" -0.82039022445678711 1.8818590641021729 -0.1516404741825173 ;
@@ -46949,7 +46949,7 @@ createNode mesh -n "R_upperKnuckleBack" -p "polySurface91";
 		145 1 
 		146 1 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "polySurface93" -p "polySurface91";
+createNode transform -n "Finger4" -p "Finger5";
 	rename -uid "B86A8BC2-4914-2E2F-F03E-DBB294840A23";
 	setAttr ".rp" -type "double3" -0.82029783725738525 1.7806465625762939 -0.14703669116571608 ;
 	setAttr ".sp" -type "double3" -0.82029783725738525 1.7806465625762939 -0.14703669116571608 ;
@@ -47219,11 +47219,11 @@ createNode mesh -n "R_LowerKnuckleBack" -p "polySurface93";
 		82 1 
 		83 1 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "polySurface92" -p "polySurface89";
+createNode transform -n "Finger3" -p "LeftArmHand";
 	rename -uid "96E2B947-453A-71DE-08B5-82BA28C411FE";
 	setAttr ".rp" -type "double3" -0.70577201125960709 1.8815622467636242 0.089262682717885677 ;
 	setAttr ".sp" -type "double3" -0.70577201125960709 1.8815622467636242 0.089262682717885677 ;
-createNode mesh -n "R_upperknuckle2" -p "polySurface92";
+createNode mesh -n "R_upperknuckle2" -p "Finger3";
 	rename -uid "309DB456-4123-B3F0-294F-0BA22F7F808A";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -47723,11 +47723,11 @@ createNode mesh -n "R_upperknuckle2" -p "polySurface92";
 		145 1 
 		146 1 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "polySurface94" -p "polySurface92";
+createNode transform -n "Finger2" -p "Finger3";
 	rename -uid "498C474E-48A7-98E0-D5D0-D6817192D7E1";
 	setAttr ".rp" -type "double3" -0.71033265476458085 1.7816631828185525 0.082177447798529674 ;
 	setAttr ".sp" -type "double3" -0.71033265476458085 1.7816631828185525 0.082177447798529674 ;
-createNode mesh -n "R_lowerknuckle2" -p "polySurface94";
+createNode mesh -n "R_lowerknuckle2" -p "Finger2";
 	rename -uid "6511A016-4D4D-1D42-6EE7-72BC2BE3079C";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -47993,7 +47993,7 @@ createNode mesh -n "R_lowerknuckle2" -p "polySurface94";
 		82 1 
 		83 1 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "polySurface90" -p "polySurface89";
+createNode transform -n "Finger1" -p "LeftArmHand";
 	rename -uid "BBAD91D0-469B-8810-BC1F-9FBBC8CECAB1";
 	setAttr ".rp" -type "double3" -0.94942635297775269 1.8788309097290039 0.096824109554290771 ;
 	setAttr ".sp" -type "double3" -0.94942635297775269 1.8788309097290039 0.096824109554290771 ;
@@ -48497,7 +48497,7 @@ createNode mesh -n "R_UpperKNuckle1" -p "polySurface90";
 		145 1 
 		146 1 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "polySurface95" -p "polySurface90";
+createNode transform -n "Finger" -p "Finger1";
 	rename -uid "F7F1010C-4AD5-77D7-3786-83BA6B99F71B";
 	setAttr ".rp" -type "double3" -0.94162344932556152 1.7771539688110352 0.084966138005256653 ;
 	setAttr ".sp" -type "double3" -0.94162344932556152 1.7771539688110352 0.084966138005256653 ;
@@ -48767,7 +48767,7 @@ createNode mesh -n "R_LowerKnuckle1" -p "polySurface95";
 		82 1 
 		83 1 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "polySurface96" -p "polySurface89";
+createNode transform -n "LeftLazer" -p "LeftArmHand";
 	rename -uid "A53C0BF1-48BB-039B-7D28-53836F67396B";
 	setAttr ".rp" -type "double3" -0.82042807340621948 2.2619771957397461 0.18867804110050201 ;
 	setAttr ".sp" -type "double3" -0.82042807340621948 2.2619771957397461 0.18867804110050201 ;
@@ -51210,7 +51210,7 @@ createNode script -n "uiConfigurationScriptNode";
 	rename -uid "422DCD58-4648-4566-CEEA-30923C0A3D8E";
 	setAttr ".b" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n"
-		+ "            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n"
+		+ "            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 8192\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n"
 		+ "            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n"
 		+ "            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 552\n            -height 333\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
@@ -51242,7 +51242,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n"
-		+ "                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n"
+		+ "                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 8192\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n"
 		+ "                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n"
 		+ "                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n"
@@ -51418,7 +51418,7 @@ createNode materialInfo -n "materialInfo5";
 	rename -uid "C40799C4-4D9C-77FE-EB22-4EBBB84B35F2";
 createNode file -n "RobotMetal";
 	rename -uid "DF0F7DCC-4CDE-3C75-C3E1-3BB607204ABD";
-	setAttr ".ftn" -type "string" "C:/Users/10830720/Documents/Github/DGM1660/DGM1660_-fall-2017/Robot Model//metal.jpg";
+	setAttr ".ftn" -type "string" "D:/Backups/Users/Administrator/Documents/Github/DGM/DGM1660_-fall-2017/Robot Model//metal.jpg";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "place2dTexture5";
 	rename -uid "085E9E4F-44DD-C388-EBD9-E390AFB9E1FC";
@@ -51821,37 +51821,37 @@ connectAttr ":initialShadingGroup.mwc" "pSphere11Shape.iog.og[0].gco";
 connectAttr "Right_leg.di" "Right_Leg.do";
 connectAttr "Torso.di" "Torso_capsol.do";
 connectAttr "Left_leg.di" "Left_leg1.do";
-connectAttr "LowerRightLeg.di" "polySurface99.do";
-connectAttr "LowerRightLeg.di" "polySurface97.do";
+connectAttr "LowerRightLeg.di" "LeftLeg.do";
+connectAttr "LowerRightLeg.di" "RightLeg.do";
 connectAttr "Torso.di" "polySurface74.do";
-connectAttr "Torso.di" "polySurface98.do";
+connectAttr "Torso.di" "UpperTorso.do";
 connectAttr "neck.di" "Robot_Neck_group.do";
 connectAttr "ShoulderBar.di" "Robot_Shoulder_Bar.do";
-connectAttr "right_arm.di" "polySurface76.do";
-connectAttr "right_arm.di" "polySurface77.do";
-connectAttr "right_arm.di" "polySurface78.do";
-connectAttr "lowerRightArm.di" "polySurface79.do";
-connectAttr "lowerRightArm.di" "polySurface81.do";
-connectAttr "lowerRightArm.di" "polySurface83.do";
-connectAttr "lowerRightArm.di" "polySurface82.do";
-connectAttr "lowerRightArm.di" "polySurface84.do";
-connectAttr "lowerRightArm.di" "polySurface80.do";
-connectAttr "lowerRightArm.di" "polySurface85.do";
-connectAttr "RightLazer.di" "polySurface75.do";
-connectAttr "LeftArm.di" "polySurface86.do";
-connectAttr "LeftArm.di" "polySurface87.do";
-connectAttr "LeftArm.di" "polySurface88.do";
-connectAttr "lowerLeftArm.di" "polySurface89.do";
+connectAttr "right_arm.di" "RightShoulder.do";
+connectAttr "right_arm.di" "RightUpperArm.do";
+connectAttr "right_arm.di" "RightElbow.do";
+connectAttr "lowerRightArm.di" "RightArmHand.do";
+connectAttr "lowerRightArm.di" "Finger11.do";
+connectAttr "lowerRightArm.di" "Finger10.do";
+connectAttr "lowerRightArm.di" "Finger9.do";
+connectAttr "lowerRightArm.di" "Finger8.do";
+connectAttr "lowerRightArm.di" "Finger7.do";
+connectAttr "lowerRightArm.di" "Finger6.do";
+connectAttr "RightLazer.di" "RightLazer1.do";
+connectAttr "LeftArm.di" "LeftShoulder.do";
+connectAttr "LeftArm.di" "LeftUpperArm.do";
+connectAttr "LeftArm.di" "LeftElbow.do";
+connectAttr "lowerLeftArm.di" "LeftArmHand.do";
 connectAttr "groupId14.id" "R_LowerArm.iog.og[0].gid";
 connectAttr "lambert40SG.mwc" "R_LowerArm.iog.og[0].gco";
 connectAttr "groupId13.id" "R_LowerArm.ciog.cog[0].cgid";
-connectAttr "lowerLeftArm.di" "polySurface91.do";
-connectAttr "lowerLeftArm.di" "polySurface93.do";
-connectAttr "lowerLeftArm.di" "polySurface92.do";
-connectAttr "lowerLeftArm.di" "polySurface94.do";
-connectAttr "lowerLeftArm.di" "polySurface90.do";
-connectAttr "lowerLeftArm.di" "polySurface95.do";
-connectAttr "leftLazer.di" "polySurface96.do";
+connectAttr "lowerLeftArm.di" "Finger5.do";
+connectAttr "lowerLeftArm.di" "Finger4.do";
+connectAttr "lowerLeftArm.di" "Finger3.do";
+connectAttr "lowerLeftArm.di" "Finger2.do";
+connectAttr "lowerLeftArm.di" "Finger1.do";
+connectAttr "lowerLeftArm.di" "Finger.do";
+connectAttr "leftLazer.di" "LeftLazer.do";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
@@ -52157,7 +52157,7 @@ connectAttr "lambert41.msg" "materialInfo40.m";
 connectAttr "Shell.oc" "lambert42SG.ss";
 connectAttr "Robot_CapsolSuport.iog" "lambert42SG.dsm" -na;
 connectAttr "Robot_Capsol_bottom.iog" "lambert42SG.dsm" -na;
-connectAttr "|Robot_hips|polySurface74|Robot_CapsolSupport|polySurface98|Robot_Neck_group|Robot_Head|Robot_Head.iog" "lambert42SG.dsm"
+connectAttr "|Robot_hips|polySurface74|Robot_CapsolSupport|UpperTorso|Robot_Neck_group|Robot_Head|Robot_Head.iog" "lambert42SG.dsm"
 		 -na;
 connectAttr "|Robot_hips|Robot_hips.iog" "lambert42SG.dsm" -na;
 connectAttr "L_LowerKnuckle2.iog" "lambert42SG.dsm" -na;
